@@ -1,65 +1,44 @@
-# JS GitHub Analyzer
+# JavaScript-Projects
 
-JS GitHub Analyzer, GitHub depolarını hızlıca incelemek için tasarlanmış hafif bir JavaScript aracıdır. Bu araç; dil dağılımı, dosya sayıları, önemli dosyaların varlığı (README, LICENSE, package.json) ve package.json varsa bağımlılık listesini çıkararak JSON ve insan okunur özet halinde çıktı üretir.
+Bu depo, çeşitli öğrenme ve örnek amaçlı bağımsız JavaScript projelerini bir arada toplar. Her proje kendi başına çalışır ve genellikle tek dosya veya küçük bir klasör halinde örnekler, demolar ve açıklamalar içerir.
 
-Bu depo, bir dizi bağımsız JavaScript örnek projesi içerir. "JS-GitHub Analyzer" aracı bir zip dosyası olarak repoda bulunur; içeriğini açarak tarayıcıda veya yerel sunucuda çalıştırabilirsiniz.
+## İçerik (genel)
 
-Özellikler
+- Birden fazla küçük JavaScript örnek projesi (OOP örnekleri, küçük uygulamalar, statik demo siteler vb.)
+- Her örneğin yanında kısa açıklama ve çalıştırma notları (varsa README veya .md dosyaları)
+- Bazı örnekler zip arşivleri olarak paketlenmiş olabilir (ör. statik demo siteleri)
 
-- Depo dil dağılımı ve yaklaşık satır sayısını raporlar
-- Dosya sayıları ve dikkat çeken dosyaları listeler (README, LICENSE, package.json vb.)
-- package.json içindeki bağımlılıkları çıkarır
-- Çıktıyı JSON olarak kaydeder ve kısa bir özet yazdırır
+> Not: Eski ana README içinde yer alan "JS-GitHub Analyzer" açıklaması kaldırıldı; analiz aracı hâlâ repoda bir klasör veya zip dosyası olarak bulunuyorsa, ilgili klasörün içinde ayrıntılı talimatlar yer alır.
 
-Dosya düzeni (kök dizin)
-
-- JS-GitHub Analyzer.zip — Analiz aracının sıkıştırılmış dağıtımı (index.html, project.js, assetler)
-- JS-Banka Hesabı OOP Örneği.js — Banka hesabı, hayvan, kişi örnekleri
-- JS-OOP Kütüphane Örneği.js — Kitap ve kütüphane OOP örneği
-- JS-OOP-E-Ticaret Ve Market Örneği.js — Ürün, sepet ve türler içeren örnek
-- JS-Weather Forecast Project.zip — Hava durumu tahmin örneği (statik site)
-- README*.md — Her örnek için ayrı açıklayıcı dosyalar
-
-Nasıl çalıştırılır
+## Nasıl başlarım
 
 1. Depoyu klonlayın:
 
    git clone https://github.com/calti23/JavaScript-Projects.git
    cd JavaScript-Projects
 
-2. JS-GitHub Analyzer'ı açma (hızlı yol - tarayıcı):
-   - `JS-GitHub Analyzer.zip` dosyasını açın ve içindeki klasörü çıkarın.
-   - `index.html` dosyasını bir tarayıcıda açın.
+2. Kök dizindeki her proje klasörünü veya dosyasını inceleyin. Her örneğin yanında README veya açıklama dosyası varsa o dosyadaki talimatları izleyin.
 
-3. Veya yerel statik sunucu ile servis edin:
+3. Statik demo siteler veya zip halinde paketlenmiş örnekleri açmak için:
 
-   npx serve "JS-GitHub Analyzer"
-   # veya
-   python -m http.server 8000 --directory "JS-GitHub Analyzer"
+   - Zip dosyasını açın ve içindeki `index.html` dosyasını tarayıcıda açın, veya
+   - Yerel bir statik sunucu kullanın (ör. `npx serve` veya `python -m http.server`)
 
-   Sonra tarayıcıda http://localhost:5000 (veya sunucunun raporladığı port) adresini açın.
+4. Eğer bir proje Node.js betiği içeriyorsa:
 
-4. Eğer proje `project.js` gibi bir Node betiği içeriyorsa CLI ile JSON çıktı almak için:
+   - Gerekliyse bağımlılıkları yükleyin: `npm install`
+   - Çalıştırmak için: `node dosya.js` veya proje README'sindeki komutları kullanın
 
-   node "JS-GitHub Analyzer/project.js" --path /path/to/repo --output result.json
+## Katkıda bulunma
 
-Notlar
+- Hata bildirimi ve öneriler için issue açabilirsiniz.
+- Yeni örnek projeler eklemek veya mevcut açıklamaları iyileştirmek için pull request gönderebilirsiniz.
+- Lütfen her katkı için kısa bir açıklama ve çalıştırma talimatları ekleyin.
 
-- Bu repoda kök düzeyinde package.json veya merkezi bir build sistemi gözükmüyor; her örnek bağımsız çalışır.
-- ZIP içindeki dağıtımın nasıl çalıştığını görmek için önce klasörü açın ve `index.html` ile `project.js` dosyalarını inceleyin.
+## Lisans
 
-Katkıda bulunma
+Bu depoda lisans belirtilmemiştir. Bir lisans eklemek isterseniz (ör. MIT), root'ta bir `LICENSE` dosyası oluşturabilirsiniz.
 
-Katkılar için teşekkürler — issue açabilir veya pull request gönderebilirsiniz. Öneriler:
-
-- `JS-GitHub Analyzer` klasörünü açıp `package.json` ekleyerek npm scriptleri (`start`, `build`) ekleyin
-- CLI için daha sağlam argüman işleme ve testler ekleyin
-- Tarayıcı arayüzüne GitHub repo URL'si ile analiz özelliği ekleyin (CORS/İzinler göz önüne alınarak)
-
-Lisans
-
-Bu projede lisans belirtilmemiştir. Açık kaynak lisansı eklemek isterseniz (ör. MIT) bir LICENSE dosyası ekleyin.
-
-İletişim
+## İletişim
 
 Sorumlu: calti23
